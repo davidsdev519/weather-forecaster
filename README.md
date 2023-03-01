@@ -16,10 +16,10 @@
 
 This app is developed on a Mac OS.
 
-Ruby - 3.2.1
-Rails - 7.0.4.2
+* Ruby - 3.2.1
+* Rails - 7.0.4.2
 
-Install the latest ruby & rails using rbenv or asdf whatever is familar with.
+Install the latest ruby & rails using rbenv or asdf whatever you are familar with.
 
 
 ## Set up the app
@@ -447,4 +447,4 @@ Browse to <http://127.0.0.1:3000>
 
 It's a simple weather forecaster Ruby on Rails project, Test Driven Development, API access using a specialized gem (i.e. geocoder) and a generalized gem (i.e. faraday).
 
-![My Image](images/my-image.jpg)
+![App Image](public/screenshot.png)
