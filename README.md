@@ -1,6 +1,6 @@
 # Weather forecaster web application
 
-![App Image](public/screenshot.png)
+![App Image](public/my-screenshot.png)
 
 ## Coding Assignment - Requirements
 
@@ -469,4 +469,4 @@ Browse to <http://127.0.0.1:3000>
 
 It's a simple weather forecaster Ruby on Rails project, Test Driven Development, API access using a specialized gem (i.e. geocoder) and a generalized gem (i.e. faraday).
 
-![App Image](public/screenshot.png)
+![App Image](public/my-screenshot.png)
