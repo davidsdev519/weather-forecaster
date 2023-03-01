@@ -10,7 +10,7 @@ class ForecastsTest < ApplicationSystemTestCase
       params: { 
         address: address 
       }
-    assert_selector "h1", text: "Forecast"
+    assert_selector "h1", text: "Weather Forecaster"
   end
 
 end

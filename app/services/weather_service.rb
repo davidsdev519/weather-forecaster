@@ -19,21 +19,21 @@ class WeatherService
     body = response.body
     body or raise StandardError.new "OpenWeather response body failed"
     body["main"] or raise StandardError.new "OpenWeather main section is missing"
-    body["main"]["temp"] or raise StandardError.new body
-    body["main"]["temp_min"] or raise StandardError.new "OpenWeather temperature minimum is missing"
-    body["main"]["temp_max"] or raise StandardError.new "OpenWeather temperature maximum is missing"
-    body["weather"] or raise StandardError.new "OpenWeather weather section is missing"
-    body["weather"].length > 0 or raise StandardError.new "OpenWeather weather section is empty"
-    body["weather"][0]["description"] or raise StandardError.new "OpenWeather weather description is missing"
 
     # build weather data
     weather = OpenStruct.new
+    weather.name = body["name"]
     weather.temperature = body["main"]["temp"]
     weather.temperature_min = body["main"]["temp_min"]
     weather.temperature_max = body["main"]["temp_max"]
     weather.humidity = body["main"]["humidity"]
     weather.pressure = body["main"]["pressure"]
+    weather.main = body["weather"][0]["main"]
     weather.description = body["weather"][0]["description"]
+    weather.icon = body["weather"][0]["icon"]
+    weather.dt = body["dt"]
+    weather.visibility = body["visibility"]
+
     weather
   end
     
